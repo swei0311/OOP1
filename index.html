@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 18px;
+    background: #0b0e14;
+    color: #e9edf5;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  pre {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    background: #141a25;
+    border: 1px solid #30394a;
+    border-radius: 14px;
+    font: inherit;
+    line-height: 1.55;
+  }
+  @media (max-width: 600px) {
+    body { padding: 10px; }
+    pre { padding: 14px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<pre>Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 1 Solution----- Introduction to Java
+
+    1. Suppose you define a Java class as follows:
+  public class New2Java{
+?..
+}
+
+The correct file name for the above java source file should be:
+    a. new2java.java
+    b. class1.java
+    c. New2Java.txt
+    d. New2Java.java----Ans
+
+2.  Choose the correct answer to fill in the blanks.
+ *.java ________ code is compiled to *.class _________ code. ______ code *.class is interpreted to _____ code which a computer can run.
+    a. source, byte, byte, binary--- Ans
+    b. byte, source, source, byte
+    c. binary, source, byte, source
+    d. binary, byte, source, binary
+
+3. If you run a Java Application, the error message is:
+"Exception in thread "main" java.lang.NoClassDefFoundError: IllFile", the reason is that IllFile.java does not contain method:
+    a. public static void main(String[] args)----Ans
+    b. Public void main(String[] args)
+    c. public void static main(String[] args)
+    d. public static void main(string args)
+
+4. Which of the following is an invalid java comment?
+    a. // System.out.println("Hi")
+    b. /* System.out.println("Hi")*/
+c.   /*System.out.println("Hi") ----Ans
+    c. /** System.out.println("Hi")*/
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 2 Solution ----- Elementary Programming
+
+
+    1. State whether the following identifiers are valid or invalid (state your reason for invalid identifiers)
+      
+a.	static	f.	_hello                 ?
+b.	boolean	g.	aVeryLongWord                   ?
+c.	Public          ?	h.	4#R
+d.	public	i.	first  Number$ 
+e.	void	j.	return
+
+Invalid identifiers: static, boolean, public, void, return are reserved words in Java
+Invalid identifier: 4#R, first  Number$
+	
+             Java identifier must start with a letter followed by letters or digits or both. They 
+             can be of any length and may contain underscore(_) or dollar sign($).
+
+    2. Specify True/False for the following statements. If FALSE, provide the correct answer or explanation.
+
+        a. In Java programming, numbers can contain commas-----FALSE
+        b. Given a statement xValue = yValue;
+The value in xValue is assigned to the variable yValue----FALSE
+        c. Look at the following statements:
+System.out.println("the output for 25/4 is " + 25 /4); //should be 6
+System.out.println("the output for 25/4.0 is " + 25/4.0);
+ 
+The output for both is 6.25----FALSE
+
+    3. State the value of the variables x, y and z after each line is executed.
+What is the output display?
+
+                            public class Ex1 {
+                                 public static void main(String[] args){
+                                          String x = "PrintOut "; //x="PrintOut "
+                                          int y = 30 + 33; //y=63
+                                          int z = 9; //z=9
+                                           x = "Result of " + x + "is "; // X= "Result of PrintOut is"
+                                           System.out.println (x + y + z); // Result of PrintOut is 639
+                                           System.out.println (y + z); //72
+                                   }
+                           }
+
+
+
+    4. Write a Boolean expression that evaluates to true if the number is between 1 and 50 inclusively
+
+(x&gt;=1)&amp;&amp;(x&lt;=50)
+
+    5. Write a Boolean expression that evaluates to true if the number is greater than 10 and less than 20 or the number is negative
+
+((x&gt;10)&amp;&amp;(x&lt;20)) || (x&lt;0)
+
+    6. Are the following conversions involving casting allowed? If yes, find the converted result
+char c = 'a';
+int i = (int) c;                                                  // i  becomes 97,ASCII value for char 'a'
+double d = 100.43;
+int i = (int)d;                                                            // i becomes 100
+int i = 10;
+boolean b = (boolean)i;                                           // not allowed
+double monthpay = 2076.02534;
+monthpay =(int)(monthpay*100)/100.0;     // monthpay becomes 2076.02
+       
+    7. Identify, correct  and state the errors found in the following program:
+
+             public class T2_7 {
+                 public static void main(String[] args){
+  int n = 1,000,000,000; // Syntax Error:  Replace it with int n = 1000000000;
+                                        // or Replace it with int n = 1000_000_000;
+                     System.out.println("One thousand million: \t " + n)  //lack of ";" at the end of  statement
+  System.out.println("Two thousand million: \t" + n + n); 
+/* system is a class and should start with uppercase. Logical Error: Replace with   (n + n));  */
+              }
+           }
+
+    8. Use Java to implement the following algorithm:
+Step 1:  First Number is equal to 12
+Step 2:  Second Number is equal to 6
+Step 3:  compute the product of  these two numbers and store it in z
+Step 4: display the value of z 
+
+            Add some comments to the program 
+                     /*  Class Name : T2_8
+                    *  Description: A program that computes the product of two given numbers
+                     */
+                    public class T2_8 {
+                       public static void main(String[] args)  {// main method   
+                               int First_Number = 12;
+                               int Second_Number = 6;
+                               int z = First_Number*Second_Number;
+                               System.out.println(z);                
+                        }
+                     }
+                    
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 3 Solution  Control Statements
+
+
+
+1. What is the result of executing the following code segment?
+
+     int n = 1;
+     if (n=0)  // Compilation Error: incompatible types; found: int, required: boolean
+		//should be if (n= =0)   , then "n is not 0" will be printed out.
+         System.out.println("n is 0");
+     else
+         System.out.println("n is not 0");
+
+2. What is the result of executing the following code segment?
+
+int n = 1;
+if (n= =0)
+         System.out.println("n is 0");
+    else (n!=0) //Compilation Error.-  there should be no condition after else, should be else only, then the printout is  "n is not 0"
+         System.out.println("n is not 0");
+
+3. What is the result of executing the following code segment?
+
+int n = 1;
+if (n= =0); // should be if (n= = 0), no ";"
+         System.out.println("n is 0");
+    else // Compilation Error: else without if, remove ";from if statement
+         System.out.println("n is not 0");
+
+4  What is the result of executing the following code segment?
+
+      double i=1;
+      switch (i){ // Compilation Error: possible loss of precision: double, required: int for switch
+		//change i to int type on the first statement, or cast i it to int:  switch ((int)i), then printout is "i is 1"
+
+        case 0: System.out.println("i is 0");
+        case 1: System.out.println("i is 1");
+      }
+5  What is the result of executing the following code segment?
+
+      int i=0;
+      switch (i){
+         case 0: System.out.println("i is 0");
+         case 1: System.out.println("i is 1");
+      }
+
+Ans: i is 0
+         i is 1
+
+6. What is the result of executing the following code segment?
+
+ int i = 0;
+ while (i&lt;5)
+      i++;
+      System.out.println("i is "+ i);
+
+       Ans: i is 5
+
+7.  What is the result of executing the following code segment?
+
+     int i = 0;
+     while (i&lt;5){
+          System.out.println("The square of " + i + " is " + (i*i));
+      }
+
+       Ans: infinite loop : The square of 0 is 0
+
+8.  What is the result of executing the following code segment?
+
+       int i = 0;
+       while (i&lt;5){
+        System.out.println(" " + i);
+        i++;
+      }
+
+      Ans: 0
+      1
+               2
+               3
+               4
+
+
+
+
+
+
+
+
+
+
+9.   Rewrite the code segment in Q8 using for-loop.
+
+      for(int i = 0; i&lt;5; i++)
+      {
+        System.out.println(" " + i);
+      }
+
+
+10. Rewrite the code segment in Q8 using do-while-loop.
+
+      int i = 0;
+       do {
+             System.out.println(" " + i);
+              i++;
+      } while (i&lt;5);
+
+
+11. What's the printout of the following code:
+     
+for(int i=0; i&lt;5;i++){
+   System.out.println(i*2); 
+   break;
+}
+
+0  //as after its first run, the loop stop
+
+12. Please correct any error in the codes below:
+
+            double rate =0;
+            String a = "SGD";
+switch( a) {
+case '$': rate = 1.35; break;
+    case "$": rate = 1.35; break; 
+    /*change to '$' to "$", as the case value need to match the switch expression data type, here is String type*/  
+    case "GBP": rate = 1.82; break;
+case 'MYR': rate = 2.9; break; 
+/* change MYR to "MYR", 'MYR' is neither a valid character nor a String type value. the case value need to match the switch expression data type, here is String type*/  
+}
+     
+
+
+
+
+
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 4 Solution ----- Method
+
+    1. Identify and correct the errors in the following codes:
+
+public static int calculateSum(int num1, int num2){
+	int sum = num1 + num2;
+            return sum;//add the return statement
+}
+     
+    2. Identify and correct the errors in the following codes hence, determine the result when the program is executed.
+
+public static void parentMethod(){
+     double d = 0.1;
+     System.out.println("The square of " + d + " is " + getSquare(d));
+      public static double getSquare(double s){
+               return s*s;
+       }
+}
+
+Ans: There should not be a method inside another method:
+public static void parentMethod(){
+     double d = 0.1;
+     System.out.println("The square of " + d + " is " + getSquare(d));
+}
+// pull the getSquare method out
+public static double getSquare(double s){
+      return s*s;
+ }
+
+    3. Identify and correct the errors in the following codes and hence, determine the result when the program is executed.
+
+public class Diff{
+	
+	public static void main(String[] args){
+		double num1 = 6; 
+		double num2 = 10.0; 
+	System.out.println("The difference between " + num1 + " and "+ num2 + " is " + calculateDiff(double num1, double num2); // should be calculateDiff(num1, num2)
+//when call a method, pass the parameter value only, there is no need to include the data type
+}
+ 		public static double calculateDiff(double d1, double d2){
+			double diff = d1 - d2;
+			return diff;//should return a double value
+                        }
+             }
+
+    4. Identify and correct the errors in the following program and hence, determine the result when the program is executed.
+
+public class Test {
+  	public static void main(String[] args)  {
+    		method1(5, 6);//short of one parameter
+    		System.out.println(method2(-0.5,-5, 7.8f)); 
+// 7.8f: f is missing, printout is 5.0
+//data type should be compatible
+  	}  
+  	public static void method1(int n, int m)  {
+    		n += m;
+  	}
+  	public static double method2(double n, float m, float x)  {
+    		double temp = Math.ceil(n);//temp becomes 0.0
+    		if (temp &gt; 0) return 1;
+    		else if (temp = = 0) return Math.round(m); //5.0
+    		else return -1;
+  	}
+}
+
+Ans: 5.0
+
+    5. What is pass by value? Show the result of the following method call:
+public class Test {
+	public static void main (String[] args) {
+		int maxValue = 0;
+		max (1, 2, maxValue);
+//should be maxValue = max (1, 2, maxValue);
+		System.out.println("The maximum value is " +maxValue);
+}
+public static int max (int value1, int value2, int maxValue){
+		if (value1&gt;value2)
+			maxValue = value1;
+		else
+			maxValue = value2;
+		return maxValue;
+	}
+}
+How do you rectify this problem?
+
+Ans: Print out is "The maximum value is 2".  Reason: The primitive type of data only passes a copy of its value to the method. Its original value will not be affected by the execution of the method call.
+
+
+
+
+
+    6. Identify and correct the errors in the following program:
+
+public class TryIt{
+   public static int computeCube(int a){
+	return a*a*a;
+   }
+
+       //   duplicate definition of method computeCube(int) in class 
+   public static double computeCube( int a ){
+   //change the parameter data type to double:  computeCube(double a)
+return Math.pow(a, 3);
+   } 
+ 
+               public static void main(String[] args){
+		System.out.println(" The cube of 10" + " is " + computeCube(10));//1000
+		System.out.println(" The cube of 10.0" + " is " + computeCube(10.0));//1000.0
+   }
+}
+
+    7. Identify and correct the errors in the following program:
+
+ 	public class VariableScopeA{
+		public static void main(String[] arg)                
+   //System.out.println("The message will be printed "+ n + " times: ");
+                                        //variable n not found in class Test, move it to the printMsg() 
+     printMsg("Have a nice day! ");
+}	
+
+public static  printMsg( String msg){
+      int n = 4;	
+      System.out.println("The message will be printed "+ n + " times: ");
+                                             for(int i =0; i&lt;n; i++)
+	System.out.println(msg);
+}
+                           }
+
+    8. Identify and correct the errors in the following program:
+
+public class VariableScopeB{
+	    public static void main(String[] args){
+	           int n = 6;
+           int result; //int result = 0; initialize it, variable result might not have been initialized 
+
+for(int i =0; i&lt;n; i++){//adding opening bracket
+   result = i * 2 + result;
+   System.out.println("	The result for  value " + i+ " is " + result);
+              // variable i not found in class Test , put System.out?. into for loop by adding bracket
+}//adding closing bracket
+                                 }
+                           }
+
+    9. Please correct any error in the codes below:
+
+      public static double exchangeRate2SGD(String a){
+           double rate = 0;
+           switch( a) {
+               case "USD": rate = 1.35; return rate;
+               case "GBP": rate = 1.82; return rate;
+	        case "MYR": rate = 2.9; return rate;        
+               default: return rate;// add this statement to handle other cases
+          } 
+        //return rate;// or, add this statement to handle other cases
+      }
+
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 5 Solution ----- Array part
+
+1. What is the array index type? What is the lowest index?
+Ans: int, 0
+
+2. Which of the following statements are valid array declarations? Select two correct answers.
+a. int i = new  int(30);//can be int i[ ]=new int[30];
+b. double d[] = new double[30];----Ans
+c. int i[]=(1, 4, 5, 9);//can be int i[]={1,4,5,9};
+d. float f[] = {2.3, 4.5, 5.6};//can be float f[ ]={2.3f,4.5f,5.6f};
+e. double[] a = {2, 5.6, 7};-----Ans
+
+3.  Indicate true or false for the following statements, select two correct answers:
+a. Every element in an array has the same type.---Ans
+b. The array size is fixed after it is declared.
+c. The array size is fixed after it is created.---Ans
+d. The elements in an array must be of primitive data type.
+
+    4. 4.1 Declare an int array named: marks
+
+ int[] marks;
+
+         Create and initialize the array content to: 100, 40, 50, 98
+
+      marks = new int[]{100, 40, 50, 98};
+     //or marks=new int[4]; marks[0]=100; marks[1]=40; marks[2]=50; marks[3]=98;
+
+         Assign the first element value to int variable mark4Alice
+
+int mark4Alice = marks[0];
+
+         Assign the last element value to int variable mark4Danney
+
+int mark4Danney = marks[marks.length-1];//or
+int mark4Danney = marks[3];
+
+                     Use for loop and marks.length to calculate the average value of all the elements, then print   out the average value.
+
+double sum = 0.0;
+
+for(int i= 0; i&lt;marks.length; i++){
+	sum = sum + marks[i];
+}
+System.out.println("Avearge marks is: "  + sum/marks.length);	
+
+
+
+
+ 4.7 Put the codes in step 1, 2 , 5 into a class Marks, and run it.
+       
+public class Marks{
+		public static void main(String[] args){
+
+int[] marks = {100, 40, 50, 98};
+/*or int[] marks=new int[4]; marks[0]=100; marks[1]=40; marks[2]=50; marks[3]=98;
+*/
+//or int[] marks=new int[]{100, 40, 50, 98};
+//or int[] marks;
+marks=new int[]{100, 40, 50, 98};
+*/
+double sum = 0.0;
+
+for(int i= 0; i&lt;marks.length; i++){
+			sum = sum + marks[i];
+}
+System.out.println("Avearge marks is: "  + sum/marks.length);
+		}
+}
+
+
+5 Show the output of the following program:
+      public class PassArray{
+      	public static void main(String[] args){
+		int number = 0;
+		int[] numbers = new int[1];
+		
+		m(number, numbers);
+System.out.println("number is" +number + " and numbers[0] is "  + numbers[0]);
+}
+
+public static void m(int x, int[] y){
+	x = 3;
+	y[0] = 3;
+}
+    }
+ 	Ans: number is 0 and numbers[0] is 3
+
+Tutorial 5 Solution ---Exceptions Handling Part
+
+1. Identify and fix the error in the following codes:
+	try{
+		statement1;
+}catch{			//should be----catch(Exception e)
+System.out.println("Exception caught! ");
+}
+
+2. Identify and fix the error in the following codes: 
+	try{
+	   statement1;
+}
+finally{
+   System.out.println("The End!");
+}catch(Exception e){
+   System.out.println("Your program encountered an exception");
+}
+      
+    Ans: The catch and finally should swap the position.
+
+ 3. What's the print out if the value i is 0 or 3 for the following codes?
+public class Test {
+�     public static void main(String[] args){ 
+��       try{ 
+                System.out.print("The pogram throws"); 
+���             int i = 0; 
+             ���int j = 100/i; 
+���             System.out.print(" no exception. "); 
+��       }catch (Exception e){ 
+���              System.out.print(" exception."); 
+��       }finally { 
+���              System.out.print(" Thanks!"); 
+��       }
+       ��System.out.print(" Have a nice day!");
+�     }
+}
+
+    Ans: If i is 0, the print out is "The program throws exception. Thanks! Have a nice 
+            day!"
+            If i is 3, the print out is "The program throws no exception. Thanks! Have a    
+            nice day!"
+
+4.   Which statement is FALSE about the try{} block? 
+
+a. Some of the statements in a try{} block will never throw an exception.
+b. The statements in a try{} block may throw several types of exception.
+c. The try{} block can not contain loops or branches.---Ans
+d. The try{} block must appear before the catch{} blocks.
+
+5. How many finally{} blocks may there be in a try/catch structure?
+
+a. There must always be one, following the last catch{} block.
+b. There can be zero or one immediately after each catch{} block.
+c. There can be zero or one, following the last catch{} block.-Ans
+d. There can be any number, following the last catch{} block.
+
+6. When is a finally{} block executed?
+
+a.�Only when an unhandled exception is thrown in a try{} block.
+b.�Only when any exception is thrown in a try{} block.
+c.��Always after execution has left a try{} block, no matter for what reason.---Ans
+d.�Always just as a method is about to finish.
+
+7. Please run following code, which line(s) will cause exception?
+	
+    Line 1:	public class Ex{
+    Line 2:             public static void main(String[] a){
+    Line 3:          	double [ ] e = new double[8];
+    Line 4:                     e[0] = 2.0;
+    Line 5:    		e[8] = 8;
+    Line 6:		for(int i=0; i&lt;=e.length; i++)
+Line 7:                        System.out.println(e[i]);
+Line 8:            }
+    Line 9:         }
+
+    a. Line 5 will cause NumberFormat Exception as an integer value is assigned to double    
+      array element.
+    b. Line 5 will cause ArrayIndexOutOfBoundsException as array e's last element index is 7.  ---Ans
+    c. Line 7 will cause ArrayIndexOutOfBoundsException as array e's last element index is e.length-1, not e.length.   --Ans
+    d. Line 6 will cause ArrayIndexOutOfBoundsException as array e's last element index is e.length-1, not e.length. 
+ 
+
+
+
+
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 6 Solution ----Object and Classes
+
+1.  A constructor is used to
+a. free memory
+b. initialize a newly created object.--Ans
+c. return a value.
+d. create a JVM.
+
+2. How many objects of a given class may be constructed in an application?
+a. Only one per constructor.
+b. As many as the application asks for.---Ans
+c. Only one per class.
+d. One object per variable.
+
+3.Write a program that declares a class named "Person". It should have public instance variables to record name as a single character and age as an integer. Write a test program to create an object 'myPerson', assign name and age as X and 16 respectively, then print out the info. The expected output should be as given below:
+            myPerson's name is X
+            myPerson's age is 16
+
+Ans: 
+  class Person {
+  char name;
+  int age;
+  }
+
+  public class TestPerson {
+public static void  main ( String  args[]){
+Person myPerson = new Person();
+myPerson.name='X';
+myPerson.age = 16;
+System.out.println("myPerson's name is "+myPerson.name);
+System.out.println("myPerson's age is "+myPerson.age);
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+4. Add a constructor to Person class of the Question 3 and declare variables as private. Rewrite the program using "get" methods to return variables.
+Ans: 
+  class Person2 {
+private char name;
+private int age;
+      Person2 ( char newName, int newAge) {
+      name = newName;
+      age = newAge;
+	}
+	public char getName(){
+		return name;
+	}
+	public int getAge(){
+		return age;
+      }
+  }
+
+  public class TestPerson2 {
+public static void main ( String args[]){
+Person2 myPerson = new Person2('X', 16);
+System.out.println("myPerson's name is  "+myPerson.getName());
+System.out.println("myPerson's age is  "+myPerson.getAge());
+}
+  }
+
+
+
+5. Study the following classes and write the expected output.
+
+class Handphone{
+	static int count=0;
+	String imei;
+
+	Handphone(String im) {
+	imei = im;
+	++count;
+	}
+}
+public class TestHP{
+	public static void main ( String args[]){
+Handphone h1 = new Handphone("S00A");
+System.out.println(h1.imei + " "+ h1.count);
+Handphone h2 = new Handphone("S00B");
+System.out.println(h2.imei + " "+ h1.count);
+Handphone h3 = new Handphone("S00C");
+System.out.println(h3.imei + " "+ Handphone.count);
+System.out.println(h1.imei + " "+ h1.count);
+System.out.println(h2.imei + " "+ h2.count);
+
+         }
+    }
+Ans: 
+    S00A  1
+    S00B  2
+S00C  3
+S00A  3
+S00B  3   
+
+
+
+
+
+
+
+6. What is the expected output of the following program? What change is needed to get correct number of objects? Show the correct output.
+
+public class TestHP
+{
+ public static void main (String args[])
+ {
+ 	Handphone h1 = new Handphone("S00A");
+ 	System.out.println(h1.imei +" " +Handphone.count+"  Number of 
+objects:"+h1.noOfobjects);
+ 	Handphone h2 = new Handphone("S00B");
+      System.out.println(h2.imei +" " +Handphone.count+"  Number of   
+		objects:"+h2.noOfobjects);
+  Handphone h3 = new Handphone("S00C");
+  System.out.println(h3.imei +" " +Handphone.count+"  Number of 
+		objects:"+h3.noOfobjects);   
+ }
+  
+}
+
+class Handphone
+{
+  	static int count ;
+  	String imei;
+  	int noOfobjects = 0;//--- should be static int noOfobject
+
+  Handphone(String im)
+  {
+    	imei = im;
+    	++count;
+    	++noOfobjects;
+  }
+}
+
+Ans: 
+
+S00A 1  Number of objects:1
+	S00B 2  Number of objects:1
+	S00C 3  Number of objects:1
+
+The variable 'noOfobjects' should be declared as static. The correct output is:
+
+      S00A 1  Number of objects:1
+	S00B 2  Number of objects:2
+	S00C 3  Number of objects:3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. What is the output of the following program?
+
+public class TestLinkPoint {
+	public static void main ( String args[]){
+LinkPoint myLinkPoint = new LinkPoint();
+myLinkPoint.nTUCLinkPoint();
+}
+}
+
+class LinkPoint {
+	int points = 1000;
+
+	public void  nTUCLinkPoint() {
+int points = 100;
+System.out.println(points);
+bonusPoint();
+}
+public void bonusPoint(){
+	System.out.println(points);
+}
+}
+
+Ans: 
+     100
+     1000
+
+
+
+
+8*. Modify the constructor in the Question 4 to use the "this" keyword.
+    Ans: 
+      Person2 ( char name, int age) {
+      this.name = name;
+      this.age = age;
+	}
+
+
+Tutorial 6  Solution---- Strings Part
+
+1. Suppose that s1 and s2 are two strings. Which of the following statements of expressions are incorrect?
+a. String s3 = s1 + s2;
+b. String s3 = s1 - s2;--Ans
+c. int i = s1.length( );
+d. char c = s2(0);---Ans
+
+2. Which of the following String declaration are true?
+a. String beta = new ("Hello World! ");
+b. String beta = new String ("Hello World! ");--Ans
+c. String beta = "Hello World!";--Ans
+
+3. Suppose there are following String objects:
+String s1 = new String ("Hi");
+String s2 = new String ("Hi");
+String s3 = "Hi";
+String s4 = "Hi";
+String s5 = new String("hi");
+
+Which of the following statement will print out "true"?
+    a. System.out.println( s1.equals(s2));--Ans
+    b. System.out.println( s1.equals(s3));--Ans
+    c. System.out.println( s1.equals(s5));
+    d. System.out.println( s1= =s2);
+    e. System.out.println( s1= =s3);
+    f. System.out.println( s3= =s4);--Ans
+    g. System.out.println( s3.equals(s4));--Ans
+    h. System.out.println( s5.equalsIgnoreCase(s3));--Ans
+
+4. Suppose that s1, s2, s3, s4 are four strings, given as follows:
+	String s1 = "Welcome to Java";
+   What are the results of the following expressions?
+    a. s1.charAt(0);  --W
+    b. s1.indexOf('J');---11
+    c. s1.lastIndexOf("a");----14
+    d. s1.indexOf("j"); ------ -1
+    e. s1.substring(0, s1.indexOf("to"));------Welcome 
+    f. s1.startsWith("Wel");-------true
+    g. s1.endsWith("va");----------true
+    h. s1.toLowerCase( );----------welcome to java
+    i. s1.length( );   -----------------15
+
+5.  Examine the following declarations: 
+int area;
+String name;
+       Which of the following is true? 
+a.  area is a primitive variable, and name is a reference variable.---Ans
+b.  area is a reference variable, and name is a primitive variable.
+c.  both are primitive variables.
+      d.  both are reference variables.
+
+ Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 7 Solution ----Inheritance and Interfaces
+
+    1. What is the difference between a subclass and a superclass?
+
+Ans: Subclass inherits functionality from its superclass and can also creates new data and new methods. Subclasses usually have more functionality than their superclasses.
+
+    2. OOP allows you to derive new classes from existing classes. What is this called?
+
+Ans: It is called class inheritance.
+
+3. The statement super() or super (parameters) must appear in which line of the subclass constructor?
+
+a. any line
+b. 2nd line
+c. 1st line---Ans
+d. last line
+
+4. What is it called when the subclass modifies the methods defined in the superclass?
+
+Ans: It is called method overriding
+
+5. Which of the following is NOT true?
+
+a. Every object is automatically an instance of Object class.
+b. Every class in Java is descended from the Object class.
+c. Object class is the root class of all Java class.
+d. object strHello in statement String strHello = "Hello";   is an instance of String    
+    class, not Object class.---Ans
+
+6. Which of the following are true? Please choose 2 correct answers.
+
+a. A subclass can extends more than one superclasses.
+b. A subclass can implementes more than one interfaces.---Ans
+c. A subclass can extends only one superclass.---Ans
+d. A subclass can implements only one interface.
+
+7. Analyze the following 2 classes:
+    
+          public class ParentClass{
+     	  public double getResult(double i, double j){
+        	return i*j;
+        }
+     }
+
+
+     public class ChildClass{
+        	public double getResult(double i, double j){
+        		return Math.pow(i,j);
+        	}
+public double doMutiplication(double i, double j){
+        		return i*j;
+        	}
+public double getResult(double i, double j, double k){
+        		return i*j*k;
+        	}
+
+public double getResult(int i, int j){
+        		return i*j;
+}
+     }
+
+     In ChildClass, which method overrides method 
+public double getResult(double i, double j) of ParentClass?
+
+     Ans: In ChildClass, method 
+public double getResult(double i, double j){
+        		return Math.pow(i,j);
+        	}
+              overrides method getResult() of ParentClass
+
+6. Which one of the following is a valid Interface?
+
+a. public interface Flower{//-----Ans
+       String color = "red";
+       public void grow();
+   }
+
+b. public interface Flower{
+     String color = "red";
+     public void grow(){
+       System.out.println("It cannot grow with out water and Sun");
+     }
+   }
+
+c. public class  Flower{
+     String color = "red";
+     public void grow();
+  }
+
+d. public class Flower{
+      String color = "red";
+      public void grow(){
+       System.out.println("It cannot grow with out water and Sun");
+      }
+   }
+
+8. When a class implements an interface, the class must implement
+    a. two methods defined in that interface.
+    b. only certain methods in an interface.
+    c. any methods in the interface.
+    d. all methods defined in that interface.---Ans
+Singapore Polytechnic
+School of ELECTRICAL &amp; ELECTRONIC ENGINEERING
+
+Tutorial 8 Solution ---GUI Basics and Event-Driven Programming
+
+In this tutorial, you will be looking at 2 aspects of Java GUI Application :
+    I) Basic GUI component - Frame, Button, TextBox
+    II) Event Listener for Button
+
+Part 1
+
+        1.1 What are the 2 API packages commonly used in Java GUI Application?
+
+Ans: (1) java.awt.*; 		(2) javax.swing.*;
+
+        1.2 Here is a simple sample code of HelloWorld:
+
+1.	import javax.swing.*;  
+2.	public class HelloWorld extends JFrame{
+3.	     
+4.	     private JButton jbHello = new JButton("Hello everyone");
+5.	    public HelloWorld() {
+6.		
+7.	        getContentPane().add(jbHello);
+8.	    }
+9.	    public static void main(String[] args) 
+10.	    {
+11.	     //Create and set up the window.
+12.        HelloWorld h = new HelloWorld();
+13.	     h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+14.        //Display the window.
+15.        h.setTitle("Hello World Application");
+16.        h.setSize(200,200);
+17.        h.setVisible(true);
+18.    }
+19.	}
+
+Explain the code of the specified line number:
+
+Line No	Explanation
+1	Import the Swing API into the code
+2	Inherit from JFrame 
+4	Create a new Button with text as "Hello everyone"
+7	Add the button to the container
+9	This main method is used as the entry point to the application
+12	Create a frame
+13	Upon closing of the window, terminate the application
+15	Set the Text on the Top Bar of the Frame
+16	Set the size of the frame - 200 pixels wide, 300 pixels high 
+17	Make the frame visible
+
+
+
+
+
+
+        1.3  In order to arrange the GUI components on the window, some knowledge of Layout Managers would be needed. What are the 2 common Layout Managers used in GUI Application?
+        a) GridLayout
+        b) BorderLayout
+
+        1.4 Draw the GUI based on your understanding of the following code:
+
+import javax.swing.*;
+import java.awt.*;
+public class Calculator extends JFrame{
+    //Create the GUI components
+    private JButton jb1 = new JButton(" 1 ");
+    private JButton jb2 = new JButton(" 2 ");
+    private JButton jb3 = new JButton(" 3 ");
+    private JButton jb4 = new JButton(" 4 ");
+    private JButton jb5 = new JButton(" 5 ");
+    private JButton jb6 = new JButton(" 6 ");
+    private JButton jb7 = new JButton(" 7 ");
+    private JButton jb8 = new JButton(" 8 ");
+    private JButton jb9 = new JButton(" 9 ");
+    private JButton jb0 = new JButton(" 0 ");
+    private JButton jbAdd = new JButton(" + ");
+    private JButton jbEqual = new JButton(" = ");
+    private JTextField jtDisplay = new JTextField("");
+    /** Creates a new instance of Calculator */
+    public Calculator() {
+        JPanel p1 = new JPanel(new GridLayout(1,1));
+        p1.add(jtDisplay);
+        
+        JPanel p2 = new JPanel();
+        p2.setLayout(new GridLayout(4,3));
+        p2.add(jb1);p2.add(jb2);p2.add(jb3);
+        p2.add(jb4);p2.add(jb5);p2.add(jb6);
+        p2.add(jb7);p2.add(jb8);p2.add(jb9);
+        p2.add(jbAdd);p2.add(jb0);p2.add(jbEqual);
+        
+        setLayout(new BorderLayout());
+        add(p1,BorderLayout.NORTH);
+        add(p2,BorderLayout.CENTER);
+                                
+    }
+    public static void main(String[] args) 
+    {
+        //Create and set up the window.
+        Calculator f = new Calculator();
+	  f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+        //Display the window.
+        f.setTitle("My Calculator");
+        f.setSize(200,300);
+        f.setVisible(true);
+    }   
+}
+
+Part 2
+        2.1 To allow a program to interact with the user, it has to be event-driven. What are the 3 steps to follow when writing an event code in Java GUI application?
+Ans: 
+    i) Implement the Action Listener.
+    ii) Register the GUI component to Listener.
+    iii) Implement the actionPerformed method to handle the event.
+
+        2.2 The following is a sample code of an event-driven Java GUI application. Pick up the code that does the steps as describe in 2.1.
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class JavaEvent extends JFrame implements ActionListener{
+    //Create the GUI components
+    private JButton jb1 = new JButton(" 1 ");
+    private JButton jb2 = new JButton(" 2 ");
+    private JButton jb3 = new JButton(" 3 ");
+    private JTextField jtDisplay = new JTextField("");
+    /** Creates a new instance of javaEvent */
+    public JavaEvent() {
+        JPanel p1 = new JPanel(new GridLayout(1,1));
+        p1.add(jtDisplay);
+        
+        JPanel p2 = new JPanel();
+        p2.setLayout(new GridLayout(1,3));
+        p2.add(jb1);p2.add(jb2);p2.add(jb3);
+        
+        setLayout(new BorderLayout());
+        add(p1,BorderLayout.NORTH);
+        add(p2,BorderLayout.CENTER);
+        
+        jb1.addActionListener(this);
+        jb2.addActionListener(this);
+        jb3.addActionListener(this);
+    }
+     public static void main(String[] args) 
+    {
+        //Create and set up the window.
+        JavaEvent f = new JavaEvent();
+	  f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+        //Display the window.
+        f.setTitle("Java Event");
+        f.setSize(200,100);
+        f.setVisible(true);
+    }   
+     public void actionPerformed(ActionEvent e)
+     {
+         if(e.getSource() == jb1)
+             jtDisplay.setText("You have pressed 1");
+         else if(e.getSource() == jb2)
+             jtDisplay.setText("You have pressed 2");
+         else if(e.getSource() == jb3)
+             jtDisplay.setText("You have pressed 3");
+     }
+}
+
+</pre>
+</body>
+</html>
